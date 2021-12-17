@@ -4,6 +4,10 @@ package weekend.Spicejet;
 
 public class firsttestcase 
 {
+	public firsttestcase()
+	{
+		System.out.println("this is constructor");
+	}
 	/*public  Firstprogram()
 	{
 		System.out.println("constructor");

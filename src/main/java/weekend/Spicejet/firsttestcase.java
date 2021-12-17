@@ -9,6 +9,12 @@ public void div_1()
 {
 System.out.println("division");
 }
+
+	public firsttestcase()
+	{
+		System.out.println("this is constructor");
+	}
+
 	/*public  Firstprogram()
 	{
 		System.out.println("constructor");

@@ -4,6 +4,11 @@ package weekend.Spicejet;
 
 public class firsttestcase 
 {
+
+public void div_1()
+{
+System.out.println("division");
+}
 	/*public  Firstprogram()
 	{
 		System.out.println("constructor");

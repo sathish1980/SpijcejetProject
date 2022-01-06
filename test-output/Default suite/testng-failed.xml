@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Restassured.apivalidation">
+      <class name="Testcase.SignUP">
         <methods>
-          <include name="test"/>
+          <include name="launch"/>
+          <include name="signinwithvalidvalues"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- Restassured.apivalidation -->
+      </class> <!-- Testcase.SignUP -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -5,6 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 import Util.PropoertyFile;
 
 
@@ -13,6 +16,23 @@ public class DriverClass
 {
 	PropoertyFile P = new PropoertyFile();
 	public static WebDriver driver;
+	public static ExtentReports report;
+	public static ExtentTest test;
+	static String reportpath= System.getProperty("user.dir")+"\\Reports\\";
+	
+	public static void extreport()
+	{
+		report = new ExtentReports(reportpath+"extenreport.html",true);
+		test= report.startTest("Extent report");
+		
+	}
+	
+	public static void reportclose()
+	{
+		//test.close();
+		report.flush();
+		
+	}
 
 	public void browserlaunch()
 	{
@@ -33,6 +53,7 @@ public class DriverClass
 			System.setProperty("webdriver.edge.driver", "D:\\Software\\edgedriver_win64\\msedgedriver.exe");
 			driver= new EdgeDriver();
 		}
+		extreport();
 }
 	
 	public void urlLaunch()

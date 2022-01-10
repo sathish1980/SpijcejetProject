@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="401" started-at="2022-01-06T08:17:18 IST" finished-at="2022-01-06T08:17:18 IST">
+  <suite name="Suite" duration-ms="6072" started-at="2022-01-10T08:09:33 IST" finished-at="2022-01-10T08:09:39 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="401" started-at="2022-01-06T08:17:18 IST" finished-at="2022-01-06T08:17:18 IST">
+    <test name="Test" duration-ms="6072" started-at="2022-01-10T08:09:33 IST" finished-at="2022-01-10T08:09:39 IST">
       <class name="Testcase.SignUP">
-        <test-method status="PASS" signature="launch()[pri:0, instance:Testcase.SignUP@3439f68d]" name="launch" is-config="true" duration-ms="4781" started-at="2022-01-06T08:17:13 IST" finished-at="2022-01-06T08:17:18 IST">
+        <test-method status="PASS" signature="launch()[pri:0, instance:Testcase.SignUP@58a90037]" name="launch" is-config="true" duration-ms="4698" started-at="2022-01-10T08:09:28 IST" finished-at="2022-01-10T08:09:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="signinwithvalidvalues()[pri:0, instance:Testcase.SignUP@3439f68d]" name="signinwithvalidvalues" duration-ms="380" started-at="2022-01-06T08:17:18 IST" finished-at="2022-01-06T08:17:18 IST">
+        <test-method status="PASS" signature="signinwithvalidvalues()[pri:0, instance:Testcase.SignUP@58a90037]" name="signinwithvalidvalues" duration-ms="6049" started-at="2022-01-10T08:09:33 IST" finished-at="2022-01-10T08:09:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Testcase.SignUP@3439f68d]" name="teardown" is-config="true" duration-ms="636" started-at="2022-01-06T08:17:18 IST" finished-at="2022-01-06T08:17:19 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Testcase.SignUP@58a90037]" name="teardown" is-config="true" duration-ms="757" started-at="2022-01-10T08:09:39 IST" finished-at="2022-01-10T08:09:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -1,5 +1,8 @@
 package CommonMethods;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -7,10 +10,13 @@ import java.util.Date;
 import java.util.NoSuchElementException;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
@@ -37,6 +43,13 @@ public class ReusableComponenets
 		wait1.until(ExpectedConditions.visibilityOfAllElements(elementToWait));
 	}
 	
+	public void Fluentwaitforelementobeclickable(WebDriver driver, WebElement elementToWait)
+	{
+		FluentWait wait1 = new FluentWait(driver);
+		wait1.withTimeout(Duration.ofSeconds(60)).pollingEvery(Duration.ofSeconds(10)).ignoring(NoSuchElementException.class);
+		wait1.until(ExpectedConditions.elementToBeClickable(elementToWait));
+	}
+	
 	public void waitforelementobeclick(WebDriver driver, WebElement elementToWait)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,60);
@@ -45,7 +58,15 @@ public class ReusableComponenets
 	
 	public void click(WebElement elementoClick)
 	{
-		if(elementoClick.isDisplayed()==true &&elementoClick.isEnabled()==true)
+		if(elementoClick.isDisplayed()==true &&elementoClick.isEnabled()==true )
+		{
+			elementoClick.click();
+		}
+		
+	}
+	public void checkBoxclick(WebElement elementoClick)
+	{
+		if(elementoClick.isDisplayed()==true &&elementoClick.isEnabled()==true && elementoClick.isSelected()==false)
 		{
 			elementoClick.click();
 		}
@@ -59,6 +80,14 @@ public class ReusableComponenets
 			elementoenter.clear();
 			elementoenter.sendKeys(chartoeneter);
 		}
+		
+	}
+	
+	public void Tab_ACtions(WebDriver driver,WebElement elementoenter)
+	{
+		 while(!elementoenter.getAttribute("value").equals("")){
+			 elementoenter.sendKeys(Keys.BACK_SPACE);
+		    }
 		
 	}
 	
@@ -81,4 +110,6 @@ public class ReusableComponenets
 		
 		return Destinationfile.toString();
 	}
+	
+	
 }

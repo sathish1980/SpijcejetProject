@@ -5,6 +5,9 @@ import java.util.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 
 import CommonMethods.ReusableComponenets;
 import io.opentelemetry.exporter.logging.SystemOutLogExporter;
@@ -12,78 +15,115 @@ import io.opentelemetry.exporter.logging.SystemOutLogExporter;
 public class SignUpPage extends ReusableComponenets
 {
 	
-	//((//div[text()='Title']//parent::div)[1]//child::div[2]//div)[1]
+	@FindBy(xpath="(//div[@data-testid='application-id']//div)[43]")
+	WebElement page_Title;
+	@FindBy(xpath="((//div[text()='Title']//parent::div)[1]//div)[3]")
+	WebElement titleClick;
+	@FindBy(xpath="//div[text()='Mrs']")
+	WebElement valueClickInList;
+	@FindBy(xpath="(//div[text()='First and Middle Name']//following::input)[1]")
+	WebElement fname;
+	@FindBy(xpath="//div[text()='Signup']")
+	WebElement signup;
+	@FindBy (xpath="((//div[text()='Date of Birth']//ancestor::div)[12]/div[4])")
+	WebElement errorMessage;
+	
+	//remaning element to be convert in the page object model
 	
 	WebDriver driver;
 	
 	public SignUpPage(WebDriver driver)
 	{
 		this.driver=driver;
+		PageFactory.initElements(driver,this);
 	}
 	
-	public String pageTitle()
+	public void signuplink()
 	{
-		Fluentwaitforelementobevisible(driver, driver.findElement(By.xpath("(//div[@data-testid='application-id']//div)[43]")));
-		WebElement pageTitle= driver.findElement(By.xpath("(//div[@data-testid='application-id']//div)[43]"));
-		return returnText(pageTitle);
+		waitforelementobeclick(driver, signup);
+		click(signup);
+	}
+	public String pageTitle(String textvalue)
+	{
+		Fluentwaitforelementobevisible(driver, page_Title);
+		waitfortexttobepresent(driver, page_Title,textvalue);
+		//WebElement pageTitle= driver.findElement(By.xpath("(//div[@data-testid='application-id']//div)[43]"));
+		return returnText(page_Title);
 	}
 	
 	public void titleSelection()
 	{
-		WebElement titleClick=driver.findElement(By.xpath("((//div[text()='Title']//parent::div)[1]//div)[3]"));
+		//WebElement titleClick=driver.findElement(By.xpath("((//div[text()='Title']//parent::div)[1]//div)[3]"));
 		waitforelementobeclick(driver, titleClick);
 		click(titleClick);
-		WebElement valueClickInList=driver.findElement(By.xpath("//div[text()='Mrs']"));
+		//WebElement valueClickInList=driver.findElement(By.xpath("//div[text()='Mrs']"));
 		click(valueClickInList);
-	}
-	
-	public void firstname()
-	{
-		WebElement fname=driver.findElement(By.xpath("(//div[text()='First and Middle Name']//following::input)[1]"));
-		sendKeys(fname,"sathish");
 		
 	}
 	
-	public void lastname()
+	public void firstname(String F_name)
+	{
+		
+		//WebElement fname=driver.findElement(By.xpath("(//div[text()='First and Middle Name']//following::input)[1]"));
+		Tab_ACtions(driver,fname);
+		sendKeys(fname,F_name);
+		
+		
+	}
+	
+	public void lastname(String L_Name)
 	{
 		WebElement lname=driver.findElement(By.xpath("(//div[text()='Last Name']//following::input)[1]"));
-		sendKeys(lname,"kumar");
+		Tab_ACtions(driver,lname);
+		sendKeys(lname,L_Name);
+		
 		
 	}
 	
-	public void contactNumber()
+	public void contactNumber(String CT_Number)
 	{
 		WebElement ctNumber=driver.findElement(By.xpath("(//div[text()='Contact Number']//following::input)[1]"));
-		sendKeys(ctNumber,"9159211184");
+		Tab_ACtions(driver,ctNumber);
+		sendKeys(ctNumber,CT_Number);
 		
 	}
 	
-	public void passsword()
+	public void passsword(String Pass)
 	{
 		WebElement pwrd=driver.findElement(By.xpath("(//div[text()='Password']//following::input)[1]"));
-		sendKeys(pwrd,"Admin@123");
+		Tab_ACtions(driver,pwrd);
+		sendKeys(pwrd,Pass);
 		
 	}
 	
-	public void Confirmpasssword()
+	public void Confirmpasssword(String C_Pass)
 	{
 		WebElement cpwrd=driver.findElement(By.xpath("(//div[text()='Confirm Password']//following::input)[1]"));
-		sendKeys(cpwrd,"Admin@123");
+		Tab_ACtions(driver,cpwrd);
+		sendKeys(cpwrd,C_Pass);
 		
 	}
 	
-	public void emailId()
+	public void emailId(String Email_id)
 	{
 		WebElement eid=driver.findElement(By.xpath("(//div[text()='Email Address']//following::input)[1]"));
-		sendKeys(eid,"kumar.sathish189@gmail.com");
+		Tab_ACtions(driver,eid);
+		sendKeys(eid,Email_id);
 		
 	}
 	
-	public void DOB(int expectedyear,String expectedmonth,int expecteddate)
+	public void DOB(String Data)
 	{
+		
+		String[] splitDate=Data.split("/");
+		int expectedyear=Integer.parseInt(splitDate[2]);
+		String expectedmonth=splitDate[1];
+		int expecteddate=Integer.parseInt(splitDate[0]);
+		
 		WebElement eid=driver.findElement(By.xpath("(//div[text()='Date of Birth']//following::input)[1]"));
 		//sendKeys(eid,"11/05/1990");
 		click(eid);
+		
 		String actualmonth;
 		
 
@@ -150,12 +190,20 @@ public class SignUpPage extends ReusableComponenets
 		}
 	}
 	
-	public void agreeCheckbox()
-	{
-		waitforelementobeclick(driver,driver.findElement(By.xpath("(//*[name()='rect'])[1]")));
-		
+	public void agreeCheckbox() throws InterruptedException
+	{	
+		Thread.sleep(3000);
+		//Fluentwaitforelementobeclickable(driver,driver.findElement(By.xpath("(//*[name()='rect'])[1]")));
 		WebElement valueClickInList=driver.findElement(By.xpath("(//*[name()='rect'])[1]"));
-		click(valueClickInList);
+		checkBoxclick(valueClickInList);
+	}
+	
+	public String greaterTheneighteen()
+	{
+		Fluentwaitforelementobevisible(driver,errorMessage);
+		//WebElement errorMessageWebelement=driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div/div[2]/div[5]/div/div[4]"));
+		String erMessage= errorMessage.getText();
+		return erMessage;
 	}
 	
 	public void chatboxclick()
@@ -183,5 +231,6 @@ public class SignUpPage extends ReusableComponenets
 		driver.switchTo().defaultContent();
 		}
 	}
+	
 	
 }

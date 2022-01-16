@@ -56,6 +56,12 @@ public class ReusableComponenets
 		wait.until(ExpectedConditions.elementToBeClickable(elementToWait));
 	}
 	
+	public void waitfortexttobepresent(WebDriver driver, WebElement elementToWait,String text)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,60);
+		wait.until(ExpectedConditions.textToBePresentInElement(elementToWait,text));
+	}
+	
 	public void click(WebElement elementoClick)
 	{
 		if(elementoClick.isDisplayed()==true &&elementoClick.isEnabled()==true )
@@ -89,6 +95,23 @@ public class ReusableComponenets
 			 elementoenter.sendKeys(Keys.BACK_SPACE);
 		    }
 		
+	}
+	
+	public void scrollintoElement(WebElement scrollToelement,WebDriver driver)
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", scrollToelement);
+	}
+	
+	public Boolean ElementDisplayed(WebDriver driver,WebElement ElementDisplay)
+	{
+		Boolean Elementexit=false;
+		if(ElementDisplay.isDisplayed()==true)
+		{
+			Elementexit=true;
+		}
+		
+		return Elementexit;
 	}
 	
 	public static String takescreenshot(WebDriver driver)

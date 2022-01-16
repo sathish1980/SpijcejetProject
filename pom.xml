@@ -69,6 +69,19 @@
     <artifactId>extentreports</artifactId>
     <version>2.41.2</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.0.3</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-chrome-driver</artifactId>
+    <version>4.1.1</version>
+</dependency>
 
 <dependency>
 	<groupId>io.rest-assured</groupId>
@@ -157,6 +170,17 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+          <configuration>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <!--suiteXmlFile>suites-test-testng.xml</suiteXmlFile!-->
+                    </suiteXmlFiles>
+                </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

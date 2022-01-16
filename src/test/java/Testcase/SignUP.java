@@ -1,6 +1,7 @@
 package Testcase;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
@@ -16,12 +17,20 @@ import junit.framework.Assert;
 public class SignUP extends DriverClass
 {
 	int count=0;
+	int tccount=0;
 
-	@BeforeSuite
-	public void launch()
+	@BeforeTest
+	@Parameters("browser")
+	public void launch(String browser)
 	{
-		browserlaunch();
+		browserlaunch(browser);
 		urlLaunch();
+	}
+	@BeforeClass
+	public void signupclick()
+	{
+		SignUpPage sup= new SignUpPage(driver);
+		sup.signuplink();
 	}
 	
 	@Test(priority=0,dataProvider="Signupuser")
@@ -31,7 +40,7 @@ public class SignUP extends DriverClass
 		{
 		
 		SignUpPage s = new SignUpPage(driver);
-		String ActualText=s.pageTitle();
+		String ActualText=s.pageTitle("Member Enrollment");
 		String ExpectedText="Member Enrollment";
 		Assert.assertEquals(ExpectedText, ActualText);
 		Thread.sleep(2000);
@@ -41,10 +50,10 @@ public class SignUP extends DriverClass
 		//s.firstname(u_name);
 		test.log(LogStatus.INFO,"firstname entered");
 		s.lastname(L_name);
-		if(count<1)
+		/*if(count<1)
 		{
 		s.chatboxclick();
-		}
+		}*/
 		test.log(LogStatus.INFO,"laster entered");
 		s.DOB(Date);
 		test.log(LogStatus.INFO,"DOB entered");
@@ -81,7 +90,7 @@ public class SignUP extends DriverClass
 		{
 		
 		SignUpPage s = new SignUpPage(driver);
-		String ActualText=s.pageTitle();
+		String ActualText=s.pageTitle("Member Enrollment");
 		String ExpectedText="Member Enrollment";
 		Assert.assertEquals(ExpectedText, ActualText);
 		Thread.sleep(2000);
@@ -99,7 +108,8 @@ public class SignUP extends DriverClass
 		s.DOB(Date);
 		
 		test.log(LogStatus.INFO,"DOB entered");
-		Assert.assertEquals(s.greaterTheneighteen(),"Age should be more than 18 year");
+		test.log(LogStatus.INFO, s.greaterTheneighteen());
+		Assert.assertEquals(s.greaterTheneighteen(),"Age should be more than 18 years");
 		//s.contactNumber(M_Number);
 		String scren = ReusableComponenets.takescreenshot(driver);
 		test.log(LogStatus.PASS, "Mandatory values are enetered sucessfully",test.addScreenCapture(scren));
@@ -115,7 +125,14 @@ public class SignUP extends DriverClass
 		
 	}
 	
-	
+	@BeforeMethod
+	public void setup(Method method) {
+		
+		tccount=tccount+1;
+	    String testMethodName = method.getName(); //This will be:verifySaveButtonEnabled
+	    String descriptiveTestName = method.getAnnotation(Test.class).testName(); //This will be: 'Verify if the save button is enabled'
+	    test = report.startTest(this.getClass().getName()+" Testcase " +tccount);
+	}
 	
 	@DataProvider(name = "Signupuser")
 	public Object[][] exceldata() throws IOException
@@ -129,10 +146,11 @@ public class SignUP extends DriverClass
 		return ExcelRead.read("invaliddatavalidation");
 	}
 	
-	@AfterSuite
+	@AfterTest
 	public void teardown()
 	{
 		driver.quit();
 		report.flush();
+		
 	}
 }

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 
 import CommonMethods.ReusableComponenets;
 import io.opentelemetry.exporter.logging.SystemOutLogExporter;
@@ -22,7 +23,12 @@ public class SignUpPage extends ReusableComponenets
 	WebElement valueClickInList;
 	@FindBy(xpath="(//div[text()='First and Middle Name']//following::input)[1]")
 	WebElement fname;
-
+	@FindBy(xpath="//div[text()='Signup']")
+	WebElement signup;
+	@FindBy (xpath="((//div[text()='Date of Birth']//ancestor::div)[12]/div[4])")
+	WebElement errorMessage;
+	
+	//remaning element to be convert in the page object model
 	
 	WebDriver driver;
 	
@@ -32,9 +38,15 @@ public class SignUpPage extends ReusableComponenets
 		PageFactory.initElements(driver,this);
 	}
 	
-	public String pageTitle()
+	public void signuplink()
+	{
+		waitforelementobeclick(driver, signup);
+		click(signup);
+	}
+	public String pageTitle(String textvalue)
 	{
 		Fluentwaitforelementobevisible(driver, page_Title);
+		waitfortexttobepresent(driver, page_Title,textvalue);
 		//WebElement pageTitle= driver.findElement(By.xpath("(//div[@data-testid='application-id']//div)[43]"));
 		return returnText(page_Title);
 	}
@@ -178,8 +190,9 @@ public class SignUpPage extends ReusableComponenets
 		}
 	}
 	
-	public void agreeCheckbox()
+	public void agreeCheckbox() throws InterruptedException
 	{	
+		Thread.sleep(3000);
 		//Fluentwaitforelementobeclickable(driver,driver.findElement(By.xpath("(//*[name()='rect'])[1]")));
 		WebElement valueClickInList=driver.findElement(By.xpath("(//*[name()='rect'])[1]"));
 		checkBoxclick(valueClickInList);
@@ -187,9 +200,9 @@ public class SignUpPage extends ReusableComponenets
 	
 	public String greaterTheneighteen()
 	{
-		Fluentwaitforelementobevisible(driver,driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div/div[2]/div[5]/div/div[4]")));
-		WebElement errorMessageWebelement=driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div/div[2]/div[5]/div/div[4]"));
-		String erMessage= errorMessageWebelement.getText();
+		Fluentwaitforelementobevisible(driver,errorMessage);
+		//WebElement errorMessageWebelement=driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div/div[2]/div[5]/div/div[4]"));
+		String erMessage= errorMessage.getText();
 		return erMessage;
 	}
 	
@@ -218,5 +231,6 @@ public class SignUpPage extends ReusableComponenets
 		driver.switchTo().defaultContent();
 		}
 	}
+	
 	
 }

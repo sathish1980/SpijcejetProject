@@ -1,49 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="187418" started-at="2022-01-17T03:27:20 IST" finished-at="2022-01-17T03:30:28 IST">
+  <suite name="Suite" duration-ms="26779" started-at="2022-01-19T20:17:05 IST" finished-at="2022-01-19T20:17:32 IST">
     <groups>
     </groups>
-    <test name="Sanity" duration-ms="112669" started-at="2022-01-17T03:27:20 IST" finished-at="2022-01-17T03:29:13 IST">
+    <test name="Sanity2" duration-ms="26544" started-at="2022-01-19T20:17:05 IST" finished-at="2022-01-19T20:17:32 IST">
       <class name="Testcase.Search">
-        <test-method status="PASS" signature="searchurl()[pri:0, instance:Testcase.Search@69a10787]" name="searchurl" is-config="true" duration-ms="2466" started-at="2022-01-17T03:27:25 IST" finished-at="2022-01-17T03:27:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchurl -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.Search@69a10787]" name="setup" is-config="true" duration-ms="3" started-at="2022-01-17T03:27:28 IST" finished-at="2022-01-17T03:27:28 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.Search.ValidSearch()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidSearch()[pri:0, instance:Testcase.Search@69a10787]" name="ValidSearch" duration-ms="70469" started-at="2022-01-17T03:27:28 IST" finished-at="2022-01-17T03:28:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidSearch -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.Search@69a10787]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:28:38 IST" finished-at="2022-01-17T03:28:38 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.Search.InValidvalue()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="InValidvalue()[pri:1, instance:Testcase.Search@69a10787]" name="InValidvalue" duration-ms="6579" started-at="2022-01-17T03:28:38 IST" finished-at="2022-01-17T03:28:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InValidvalue -->
-      </class> <!-- Testcase.Search -->
-      <class name="Testcase.SignUP">
-        <test-method status="PASS" signature="launch(java.lang.String)[pri:0, instance:Testcase.SignUP@33cb5951]" name="launch" is-config="true" duration-ms="5022" started-at="2022-01-17T03:27:20 IST" finished-at="2022-01-17T03:27:25 IST">
+        <test-method status="PASS" signature="launch(java.lang.String)[pri:0, instance:Testcase.Search@6385cb26]" name="launch" is-config="true" duration-ms="7339" started-at="2022-01-19T20:17:05 IST" finished-at="2022-01-19T20:17:13 IST">
           <params>
             <param index="0">
               <value>
@@ -54,315 +18,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="signupclick()[pri:0, instance:Testcase.SignUP@33cb5951]" name="signupclick" is-config="true" duration-ms="114" started-at="2022-01-17T03:28:45 IST" finished-at="2022-01-17T03:28:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupclick -->
-        <test-method status="PASS" signature="signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Testcase.SignUP@33cb5951]" name="signinwithvalidvalues" duration-ms="12547" started-at="2022-01-17T03:28:45 IST" data-provider="Signupuser" finished-at="2022-01-17T03:28:58 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sathish]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/1990]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9159211184]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@33cb5951]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:28:45 IST" finished-at="2022-01-17T03:28:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@33cb5951]" name="setup" is-config="true" duration-ms="1" started-at="2022-01-17T03:28:58 IST" finished-at="2022-01-17T03:28:58 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Testcase.SignUP@33cb5951]" name="signinwithvalidvalues" duration-ms="3599" started-at="2022-01-17T03:28:58 IST" data-provider="Signupuser" finished-at="2022-01-17T03:29:01 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vijay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/1998]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[8939626666]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@33cb5951]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:29:01 IST" finished-at="2022-01-17T03:29:01 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Testcase.SignUP@33cb5951]" name="signinwithvalidvalues" duration-ms="3624" started-at="2022-01-17T03:29:01 IST" data-provider="Signupuser" finished-at="2022-01-17T03:29:05 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sasi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kala]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[07/Nov/1992]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[8939626765]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@33cb5951]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:29:05 IST" finished-at="2022-01-17T03:29:05 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Testcase.SignUP@33cb5951]" name="signinwithgreaterthan18years" duration-ms="3584" started-at="2022-01-17T03:29:05 IST" data-provider="Signupgreater18" finished-at="2022-01-17T03:29:09 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sathish]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/2005]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9159211184]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithgreaterthan18years -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@33cb5951]" name="setup" is-config="true" duration-ms="1" started-at="2022-01-17T03:29:09 IST" finished-at="2022-01-17T03:29:09 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Testcase.SignUP@33cb5951]" name="signinwithgreaterthan18years" duration-ms="3633" started-at="2022-01-17T03:29:09 IST" data-provider="Signupgreater18" finished-at="2022-01-17T03:29:12 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vijay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/2009]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[8939626666]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithgreaterthan18years -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Testcase.SignUP@33cb5951]" name="teardown" is-config="true" duration-ms="816" started-at="2022-01-17T03:29:12 IST" finished-at="2022-01-17T03:29:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Testcase.SignUP -->
-    </test> <!-- Sanity -->
-    <test name="SIT" duration-ms="74742" started-at="2022-01-17T03:29:13 IST" finished-at="2022-01-17T03:30:28 IST">
-      <class name="Testcase.Search">
-        <test-method status="PASS" signature="searchurl()[pri:0, instance:Testcase.Search@516be40f]" name="searchurl" is-config="true" duration-ms="2467" started-at="2022-01-17T03:29:18 IST" finished-at="2022-01-17T03:29:21 IST">
+        <test-method status="PASS" signature="searchurl()[pri:0, instance:Testcase.Search@6385cb26]" name="searchurl" is-config="true" duration-ms="0" started-at="2022-01-19T20:17:13 IST" finished-at="2022-01-19T20:17:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchurl -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.Search@516be40f]" name="setup" is-config="true" duration-ms="1" started-at="2022-01-17T03:29:21 IST" finished-at="2022-01-17T03:29:21 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.Search.ValidSearch()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidSearch()[pri:0, instance:Testcase.Search@516be40f]" name="ValidSearch" duration-ms="10334" started-at="2022-01-17T03:29:21 IST" finished-at="2022-01-17T03:29:31 IST">
+        <test-method status="PASS" signature="ValidSearch()[pri:0, instance:Testcase.Search@6385cb26]" name="ValidSearch" duration-ms="11578" started-at="2022-01-19T20:17:13 IST" finished-at="2022-01-19T20:17:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidSearch -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.Search@516be40f]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:29:31 IST" finished-at="2022-01-17T03:29:31 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.Search.InValidvalue()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="InValidvalue()[pri:1, instance:Testcase.Search@516be40f]" name="InValidvalue" duration-ms="6793" started-at="2022-01-17T03:29:31 IST" finished-at="2022-01-17T03:29:38 IST">
+        <test-method status="PASS" signature="InValidvalue()[pri:1, instance:Testcase.Search@6385cb26]" name="InValidvalue" duration-ms="6981" started-at="2022-01-19T20:17:24 IST" finished-at="2022-01-19T20:17:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InValidvalue -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Testcase.Search@6385cb26]" name="teardown" is-config="true" duration-ms="620" started-at="2022-01-19T20:17:31 IST" finished-at="2022-01-19T20:17:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="aftersuite()[pri:0, instance:Testcase.Search@6385cb26]" name="aftersuite" is-config="true" duration-ms="156" started-at="2022-01-19T20:17:32 IST" finished-at="2022-01-19T20:17:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftersuite -->
       </class> <!-- Testcase.Search -->
-      <class name="Testcase.SignUP">
-        <test-method status="PASS" signature="launch(java.lang.String)[pri:0, instance:Testcase.SignUP@646be2c3]" name="launch" is-config="true" duration-ms="5300" started-at="2022-01-17T03:29:13 IST" finished-at="2022-01-17T03:29:18 IST">
+    </test> <!-- Sanity2 -->
+    <test name="Sanity" duration-ms="26779" started-at="2022-01-19T20:17:05 IST" finished-at="2022-01-19T20:17:32 IST">
+      <class name="Testcase.Search">
+        <test-method status="PASS" signature="launch(java.lang.String)[pri:0, instance:Testcase.Search@11c20519]" name="launch" is-config="true" duration-ms="7512" started-at="2022-01-19T20:17:05 IST" finished-at="2022-01-19T20:17:13 IST">
           <params>
             <param index="0">
               <value>
@@ -373,275 +53,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="signupclick()[pri:0, instance:Testcase.SignUP@646be2c3]" name="signupclick" is-config="true" duration-ms="109" started-at="2022-01-17T03:29:38 IST" finished-at="2022-01-17T03:29:38 IST">
+        <test-method status="PASS" signature="searchurl()[pri:0, instance:Testcase.Search@11c20519]" name="searchurl" is-config="true" duration-ms="0" started-at="2022-01-19T20:17:13 IST" finished-at="2022-01-19T20:17:13 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signupclick -->
-        <test-method status="PASS" signature="signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Testcase.SignUP@646be2c3]" name="signinwithvalidvalues" duration-ms="227" started-at="2022-01-17T03:29:38 IST" data-provider="Signupuser" finished-at="2022-01-17T03:29:38 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sathish]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/1990]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9159211184]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- searchurl -->
+        <test-method status="PASS" signature="ValidSearch()[pri:0, instance:Testcase.Search@11c20519]" name="ValidSearch" duration-ms="11561" started-at="2022-01-19T20:17:13 IST" finished-at="2022-01-19T20:17:25 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@646be2c3]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:29:38 IST" finished-at="2022-01-17T03:29:38 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- ValidSearch -->
+        <test-method status="PASS" signature="InValidvalue()[pri:1, instance:Testcase.Search@11c20519]" name="InValidvalue" duration-ms="6887" started-at="2022-01-19T20:17:25 IST" finished-at="2022-01-19T20:17:31 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@646be2c3]" name="setup" is-config="true" duration-ms="1" started-at="2022-01-17T03:29:38 IST" finished-at="2022-01-17T03:29:38 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Testcase.SignUP@646be2c3]" name="signinwithvalidvalues" duration-ms="12890" started-at="2022-01-17T03:29:38 IST" data-provider="Signupuser" finished-at="2022-01-17T03:29:51 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vijay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/1998]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[8939626666]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Testcase.SignUP@646be2c3]" name="signinwithvalidvalues" duration-ms="14720" started-at="2022-01-17T03:29:51 IST" data-provider="Signupuser" finished-at="2022-01-17T03:30:06 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sasi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kala]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[07/Nov/1992]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[8939626765]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithvalidvalues -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@646be2c3]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:29:51 IST" finished-at="2022-01-17T03:29:51 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithvalidvalues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@646be2c3]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:30:06 IST" finished-at="2022-01-17T03:30:06 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Testcase.SignUP@646be2c3]" name="signinwithgreaterthan18years" duration-ms="13082" started-at="2022-01-17T03:30:06 IST" data-provider="Signupgreater18" finished-at="2022-01-17T03:30:19 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sathish]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/2005]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9159211184]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithgreaterthan18years -->
-        <test-method status="PASS" signature="setup(java.lang.reflect.Method)[pri:0, instance:Testcase.SignUP@646be2c3]" name="setup" is-config="true" duration-ms="0" started-at="2022-01-17T03:30:19 IST" finished-at="2022-01-17T03:30:19 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void Testcase.SignUP.signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signinwithgreaterthan18years(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Testcase.SignUP@646be2c3]" name="signinwithgreaterthan18years" duration-ms="8031" started-at="2022-01-17T03:30:19 IST" data-provider="Signupgreater18" finished-at="2022-01-17T03:30:27 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vijay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/May/2009]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[8939626666]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[kumar.sathish189@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinwithgreaterthan18years -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Testcase.SignUP@646be2c3]" name="teardown" is-config="true" duration-ms="781" started-at="2022-01-17T03:30:27 IST" finished-at="2022-01-17T03:30:28 IST">
+        </test-method> <!-- InValidvalue -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Testcase.Search@11c20519]" name="teardown" is-config="true" duration-ms="812" started-at="2022-01-19T20:17:31 IST" finished-at="2022-01-19T20:17:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Testcase.SignUP -->
-    </test> <!-- SIT -->
+      </class> <!-- Testcase.Search -->
+    </test> <!-- Sanity -->
   </suite> <!-- Suite -->
 </testng-results>

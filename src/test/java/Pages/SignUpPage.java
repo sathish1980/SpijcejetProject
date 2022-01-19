@@ -45,6 +45,12 @@ public class SignUpPage extends ReusableComponenets
 	}
 	public String pageTitle(String textvalue)
 	{
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Fluentwaitforelementobevisible(driver, page_Title);
 		waitfortexttobepresent(driver, page_Title,textvalue);
 		//WebElement pageTitle= driver.findElement(By.xpath("(//div[@data-testid='application-id']//div)[43]"));

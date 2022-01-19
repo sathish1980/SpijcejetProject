@@ -52,7 +52,7 @@ public class ReusableComponenets
 	
 	public void waitforelementobeclick(WebDriver driver, WebElement elementToWait)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,60);
+		WebDriverWait wait = new WebDriverWait( driver,60);
 		wait.until(ExpectedConditions.elementToBeClickable(elementToWait));
 	}
 	

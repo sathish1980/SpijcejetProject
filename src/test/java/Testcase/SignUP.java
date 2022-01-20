@@ -27,7 +27,7 @@ public class SignUP extends DriverClass
 		//sup.signuplink();
 	}
 	
-	@Test(priority=2,dataProvider="Signupuser",dataProviderClass=DataProviderclass.class)
+	@Test(priority=3,dataProvider="Signupuser",dataProviderClass=DataProviderclass.class)
 	public void signinwithvalidvalues(String u_name,String L_name,String Date,String M_Number,String Pass_D,String C_Pass_D,String E_mail_ID)
 	{
 		try
@@ -79,7 +79,7 @@ public class SignUP extends DriverClass
 	
 	
 	
-	@Test(priority=3,dataProvider="Signupgreater18",dataProviderClass=DataProviderclass.class)
+	@Test(priority=2,dataProvider="Signupgreater18",dataProviderClass=DataProviderclass.class)
 	public void signinwithgreaterthan18years(String u_name,String L_name,String Date,String M_Number,String Pass_D,String C_Pass_D,String E_mail_ID)
 	{
 		try
@@ -97,10 +97,10 @@ public class SignUP extends DriverClass
 		//s.firstname(u_name);
 		test.log(LogStatus.INFO,"firstname entered as : "+u_name);
 		s.lastname(L_name);
-		if(count<1)
+		/*if(count<1)
 		{
 		s.chatboxclick();
-		}
+		}*/
 		test.log(LogStatus.INFO,"laster entered as : "+L_name);
 		s.DOB(Date);
 		test.log(LogStatus.INFO,"DOB entered : " +Date);
@@ -110,6 +110,7 @@ public class SignUP extends DriverClass
 		String scren = ReusableComponenets.takescreenshot(getdriver());
 		test.log(LogStatus.PASS, "Mandatory values are enetered sucessfully",test.addScreenCapture(scren));
 		count= count+1;
+		getdriver().navigate().back();
 		}
 		catch(Exception E)
 		{
@@ -123,7 +124,7 @@ public class SignUP extends DriverClass
 	
 
 	
-	//@BeforeMethod
+	@BeforeMethod
 	public void setup(Method method) 
 	{
 		

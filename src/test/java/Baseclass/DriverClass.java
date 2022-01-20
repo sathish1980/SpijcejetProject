@@ -25,7 +25,7 @@ public class DriverClass
 	public static ExtentTest test;
 	static String reportpath= System.getProperty("user.dir")+"\\Reports\\";
 
-	public  ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 	
 	public static void extreport()
 	{
